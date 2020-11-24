@@ -4,10 +4,10 @@
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Header.jpg">
 </p>
 
-**Introduction**<br>
+**Introduction:**<br>
 One might wish that the time machine in the movie "Back To The Future" really existed! Stock price prediction would have been more accurate. However, no one can predict the future!
 
-**Objective**<br>
+**Objective:**<br>
 Predict Amazon stock prices for the next 7 days using LSTM networks with TensorFlow.
 
 **Why LSTM?**<br>
@@ -17,7 +17,7 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/lstm.jpg">
 </p>
 
-**Methodology**
+**Methodology:**
 1. Import all libraries: Pandas, Numpy, Matplotlib, Sklearn, tensorflow.
 2. Upload data and perform exploratory data analysis.
 3. Use "split_sequence" function to split the datasets into training and test sets. The terms "n_steps_in" is the number of inputs and "n_steps_ out" is the number of outputs. In this case, n_steps_out = 7. The term "break" is used to stop the loop in case the number of sequence exceeds the maximum length. At the end, the function returns numpy arrays of values X (past closing prices) and y (future prices).
@@ -42,10 +42,10 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Prediction.jpg">
 </p>
 
-**Conclusion**
+**Conclusion:**
 The machine learning model predicts an increase in stock prices. From the prediction above, we see that LSTM networks are able to predict future stock prices. According to Forbes.com, despite the Coronavirus pandemic, Amazon has benefited millions since people turned to online marketplaces for essential requirements.
 
-**Improvement**
+**Improvement:**
 
 i. Below are steps that were taken to optimize the model perfomance:
 - Used different scalers: RobustScaler, MinMaxScaler

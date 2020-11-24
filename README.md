@@ -46,6 +46,7 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
 The machine learning model predicts an increase in stock prices. From the prediction above, we see that LSTM networks are able to predict future stock prices. According to Forbes.com, despite the Coronavirus pandemic, Amazon has benefited millions since people turned to online marketplaces for essential requirements.
 
 **Improvement**
+
 i. Below are steps that were taken to optimize the model perfomance:
 - Used different scalers: RobustScaler, MinMaxScaler
 - Changed the learning rate : 0.1, 0.01, 0.001, 0.0001, 0.00001

@@ -29,3 +29,35 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
 <p align="center">
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Loss%20and%20accuracy.jpg">
 </p>
+
+8. Model validation. A comparison is shown between prediction and actual values. Both values converge between the 5th and 6th day.
+
+<p align="center">
+  <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Predicted%20vs%20actual.jpg">
+</p>
+
+9. Future prediction. "inverse_transform" is used to transform the normalized values back to the original values. Diagram below shows the prediction for the next 7 days.
+
+<p align="center">
+  <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Prediction.jpg">
+</p>
+
+**Conclusion**
+The machine learning model predicts an increase in stock prices. From the prediction above, we see that LSTM networks are able to predict future stock prices. According to Forbes.com, despite the Coronavirus pandemic, Amazon has benefited millions since people turned to online marketplaces for essential requirements.
+
+**Improvement**
+i. Below are steps that were taken to optimize the model perfomance:
+- Used different scalers: RobustScaler, MinMaxScaler
+- Changed the learning rate : 0.1, 0.01, 0.001, 0.0001, 0.00001
+- Doubled the amount of datasets downloaded from Yahoo finance website
+- Changed the amount of the most recent datasets : 1000, 800, 500, 250
+- Used different loss functions: MSE, RMSE, MAE
+- Tweaked network size layers : between 3-8 layers
+- Tweaked network size neurons : 60-20
+- Used different optimizers: SGD, Adam
+- Used different activation functions : ReLu, Sigmoid, Tanh
+
+ii. Steps for future improvement:
+- Try the 9 steps above again using different combinations.
+- Check out multiple input features instead of one input feature only.
+- Learn more techniques and improve by reading literature on this topic.

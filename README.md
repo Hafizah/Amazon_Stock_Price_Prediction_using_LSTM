@@ -23,8 +23,8 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
 3. Use "split_sequence" function to split the datasets into training and test sets. The terms "n_steps_in" is the number of inputs and "n_steps_ out" is the number of outputs. In this case, n_steps_out = 7. The term "break" is used to stop the loop in case the number of sequences exceeds the maximum length. At the end, the function returns numpy arrays of values X (past closing prices) and y (future prices).
 4. Construct a neural network. Use LSTM with 30 neurons in the first hidden layer and 7 neurons in the output layer for the next 7 days of price prediction.
 5. Compile the model. The mean squared error is used as a loss function. Use the Adam algorithm as an optimizer.
-6. Train the model. The model is fitted using 150 training epochs with a batch size of 30. The amount of epochs depends on whether cpu/gpu-hardware is used. More time is needed to train the model using a CPU. Epoch is the amount of time the entire dataset is passed forward and backward through the neural network. In this case 150 times. 1 epoch is too big to feed to the computer at once so, it is divided into several batches. Batch size = the number of training data in one batch. Validation_split = the percentage of the training data held back to validate performance. In this case, 10 %.
-7. Plot loss and accuracy patters. The plot shows that the training loss drops below the test loss and eventually converge at 40 epochs and onwards. The accuracy plot shows that both training and test values start to diverge at around 100 epochs. This can be a sign of underfitting or overfitting.
+6. Train the model. The model is fitted using 150 training epochs with a batch size of 30 training examples. The amount of epochs depends on whether cpu/gpu-hardware is used. More time is needed to train the model using a CPU. An epoch is the amount of times the entire dataset is passed forward and backward through the neural network. In this case 150 times. 1 epoch is too big to feed to the computer at once so, it is divided into several batches. Batch size = the number of training examples. Validation_split = the percentage of the training data held back to validate performance. In this case, 10 %.
+7. Plot loss and accuracy patters. The plot shows that the training loss drops below the test loss and eventually converge from 40 epochs onwards. The accuracy plot shows that both training and test values start to diverge at around 100 epochs. This can be a sign of underfitting or overfitting.
 
 <p align="center">
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Loss%20and%20accuracy.jpg">
@@ -36,7 +36,7 @@ The picture below shows the cell structures of Long Short-Term Memory (LSTM) and
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Predicted%20vs%20actual.jpg">
 </p>
 
-9. Future prediction. "inverse_transform" is used to transform the normalized values back to the original values. Diagram below shows the prediction for the next 7 days.
+9. Future prediction. "inverse_transform" is used to transform the normalized values back to the original values. The diagram below shows the prediction for the next 7 days.
 
 <p align="center">
   <img width="700" height="350" src="https://github.com/Hafizah/Amazon_Stock_Price_Prediction_using_LSTM/blob/main/Images/Prediction.jpg">
@@ -50,7 +50,7 @@ The machine learning model predicts an increase in stock prices. From the predic
 i. Below are steps that were taken to optimize the model perfomance:
 - Used different scalers: RobustScaler, MinMaxScaler
 - Changed the learning rate : 0.1, 0.01, 0.001, 0.0001, 0.00001
-- Doubled the amount of datasets downloaded from Yahoo finance website
+- Doubled the amount of datasets downloaded from the Yahoo finance website
 - Changed the amount of the most recent datasets : 1000, 800, 500, 250
 - Used different loss functions: MSE, RMSE, MAE
 - Tweaked network size layers : between 3-8 layers
@@ -60,5 +60,5 @@ i. Below are steps that were taken to optimize the model perfomance:
 
 ii. Steps for future improvement:
 - Try the 9 steps above again using different combinations.
-- Check out multiple input features instead of one input feature only.
+- Use multiple input features instead of one input feature.
 - Learn more techniques and improve by reading literature on this topic.

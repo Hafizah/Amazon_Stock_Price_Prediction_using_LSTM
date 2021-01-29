@@ -5,7 +5,7 @@
 </p>
 
 **Introduction:**<br>
-One might wish that the time machine in the movie "Back To The Future" really existed! Stock price prediction would have been more accurate. However, no one can predict the future!
+One might wish that the time machine in the movie "Back To The Future" really existed! Stock price prediction would have been more accurate. However, no one can predict the future. Here, I used machine learning to predict stock prices.
 
 **Objective:**<br>
 Predict Amazon stock prices for the next 7 days using LSTM networks with TensorFlow.
